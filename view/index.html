@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Scorer</title>
+    <link rel="stylesheet" href="./dist/css/main.css">
+</head>
+
+<body>
+    <div class="overlay">
+
+        <h1>Match Scorer - Snooker GR</h1>
+
+        <div class="container">
+            <div>
+                <input type="text" id="name" class="name_player" placeholder="Insira o nome do jogador">
+                <button class="btn" onclick="addPlayer()">Adicionar Jogador</button>
+            </div>
+            
+            <div>
+                <button class="btn" onclick="startMatch()">Iniciar Partida</button>
+                <button class="btn_action" onclick="viewHistory()">Ver histórico</button>
+            </div>    
+        </div>
+
+        <table style="width: 70%">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Vitórias</th>
+                    <th>Empates</th>
+                    <th>Derrotas</th>
+                    <th>Partidas</th>
+                    <th>Pontos</th>
+                    <th colspan="3">Ações</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabelaJogadores">
+            </tbody>
+        </table>
+
+        <button class="btn_remove" onClick="apagarLista()">Apagar Lista</button>
+    </div>
+    <script type="text/javascript" src="./assets/js/core/index.js" defer></script>
+</body>
+
+</html>

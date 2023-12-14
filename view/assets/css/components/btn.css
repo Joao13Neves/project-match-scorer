@@ -1,0 +1,66 @@
+.btn {
+    background-color: rgb(128, 249, 128);
+    color: rgb(1, 144, 1);
+    border-radius: 5px;
+    width: 140px;
+    height: 30px;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.winner {
+    background-color: rgb(128, 249, 128);
+    color: rgb(1, 144, 1);
+    font-size: 14px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 90px;
+    height: 20px;
+}
+
+.aTie {
+    background-color: #ff0;
+    color: #d99a18;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 90px;
+    height: 20px;
+}
+
+.defeat {
+    background-color: #f70000;
+    color: #681919;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 90px;
+    height: 20px;
+}
+
+.remove {
+    background-color: #c6c5c5;
+    color: #525252;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 80px;
+    height: 20px;
+}
+
+.btn_remove {
+    background-color: #e85a5a;
+    color: #6f0e0e;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    padding-inline: 10px;
+    height: 30px;
+    width: auto;
+    margin-top: 30px;
+}

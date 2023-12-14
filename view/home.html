@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Scorer</title>
+
+    <!-- script Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="./dist/css/main.css">
+    <style>
+        .snooker__header {
+            display: flex;
+            justify-content: space-between;
+            padding: .5rem 1rem;
+        }
+
+        .snoocker__tittle {
+            font-size: 2.5rem;
+        }
+
+        .snoocker__tittle p {
+            color: #0084B7;
+            font-weight: 700;
+        }
+
+        .snoocker__tittle span {
+            color: #FE7A00;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="snooker overlay">
+            <header class="snooker__header container">
+                <div class="snoocker__tittle">
+                    <p>Snooker <span>GR</span></p>
+                </div>
+                <nav class="snoocker__nav">
+                    <ul class="snoocker__items">
+                        <li class="snoocker__items--list">
+                            <a href="">Histórico de partidas</a>
+                        </li>
+                        <li class="snoocker__items--list">
+                            <a href="">Histórico de partidas</a>
+                        </li>
+                    </ul>
+                    <button>Registrar</button>
+                </nav>
+            </header>
+
+            <div class="container">
+                <div style="display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%; flex-direction: column;">
+                    <div>
+                        <input type="text" value="player" id="name1" class="name_player" placeholder="Insira o nome do jogador">
+                        <span style="font-size: 20px; font-weight: 700; color: #fff;"> X </span>
+                        <input type="text" value="player" id="name2" class="name_player" placeholder="Insira o nome do jogador">
+                    </div>
+                    <button class="btn" onclick="addPlayer()">Adicionar Jogadores</button>
+                </div>
+            </div>
+
+            <table id="table" style="width: 70%">
+                <thead>
+                    <tr>
+                        <th>Nickname</th>
+                        <th>Vitórias</th>
+                        <th>Pontos</th>
+                        <th colspan="3">Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelaJogadores">
+                </tbody>
+            </table>
+
+            <button class="btn_remove" onClick="apagarLista()">Finalizar jogo</button>
+        </div>
+    </main>
+
+    <footer class="footer">&copy; Copyright by João Neves & David Stewart</footer>
+
+
+    <!-- scripts -->
+    <script type="text/javascript" src="./assets/js/core/index.js" defer></script>
+    <script type="text/javascript" src="./assets/js/api/index.js"></script>
+
+
+</body>
+
+
+</html>

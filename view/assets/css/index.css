@@ -1,0 +1,4 @@
+@import "./normalize.css";
+@import "./shared/index.css";
+@import "./pages/index.css";
+@import "./components/index.css";

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Scorer</title>
+
+    <!-- script axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="./dist/css/main.css">
+    <style>
+        .details__row {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        h2 {
+            color: #fff;
+            margin-bottom: 2.5rem;
+        }
+
+        .details__historic table,
+        .details__bests table {
+            min-width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="details overlay">
+        <div class="details__content">
+            <h1 class="details__content--title">Snooker GR </h1>
+        </div>
+
+        <div class="details__row">
+            <div class="details__historic">
+                <h2>Histórico de partidas</h2>
+                <table style="width: 70%">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Player 1</th>
+                            <th>Player 2</th>
+                            <th>Placar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaJogadores">
+                    </tbody>
+                </table>
+            </div>
+            <div class="details__bests">
+                <h2>Melhores jogadores</h2>
+                <table style="width: 70%">
+                    <thead>
+                        <tr>
+                            <!-- <th>Id</th> -->
+                            <th>Nickname</th>
+                            <th>Partidas</th>
+                            <th>Derrotas</th>
+                            <th>Pontos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBests">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./assets/js/core/index.js" defer></script>
+    <script type="text/javascript" src="./assets/js/api/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  text-align: center;
+}
+
+body {
+  height: 100vh;
+  background-image: url(https://img.freepik.com/fotos-gratis/jogo-de-bilhar-homens-com-bengala-jogos-masculinos_1157-47362.jpg?w=1380&t=st=1700537915~exp=1700538515~hmac=61b284e1cc5ba0d0ecb97ef41044bd268bbf10d0528489196c8edfed52adbd9c);
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.name_player {
+  background-color: #fff;
+  border: none;
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+table {
+  border: 2px solid white;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  color: white;
+  margin: 30px 0 30px 0;
+}
+
+th,
+tr,
+td {
+  border: solid 1px white;
+  color: white;
+  padding: 15px;
+}
