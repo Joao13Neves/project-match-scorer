@@ -59,9 +59,11 @@
             align-items: center;
             width: 100%; flex-direction: column;">
                     <div>
-                        <input type="text" value="player" id="name1" class="name_player" placeholder="Insira o nome do jogador">
+                        <input type="text" value="player" id="name1" class="name_player"
+                            placeholder="Insira o nome do jogador">
                         <span style="font-size: 20px; font-weight: 700; color: #fff;"> X </span>
-                        <input type="text" value="player" id="name2" class="name_player" placeholder="Insira o nome do jogador">
+                        <input type="text" value="player" id="name2" class="name_player"
+                            placeholder="Insira o nome do jogador">
                     </div>
                     <button class="btn" onclick="addPlayer()">Adicionar Jogadores</button>
                 </div>
@@ -81,7 +83,7 @@
                 </tbody>
             </table>
 
-            <button class="btn_remove" onClick="apagarLista()">Finalizar jogo</button>
+            <button class="btn_remove" id="btn_finalizar">Finalizar jogo</button>
         </div>
     </main>
 
@@ -89,7 +91,7 @@
 
 
     <!-- scripts -->
-    <script type="text/javascript" src="./assets/js/core/index.js" defer></script>
+    <script type="text/javascript" src="./assets/js/core/index.js"></script>
     <script type="text/javascript" src="./assets/js/api/index.js"></script>
 
 

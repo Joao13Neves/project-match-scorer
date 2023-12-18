@@ -132,10 +132,12 @@ function removerDerrota(index) {
     alert("O jogador não possui derrotas a serem removidas.");
   }
 }
-function apagarLista() {
+
+function finalizarPartida() {
   listPlayer = [];
   exibirNaTela();
 }
+
 function exibirNaTela() {
   elementoTabela.innerHTML = "";
   listPlayer.forEach(function (jogador, index) {

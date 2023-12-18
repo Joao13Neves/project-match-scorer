@@ -33,7 +33,22 @@ function removerDerrota(index) {
   }
 }
 
-function apagarLista() {
+function finalizarPartida() {
+  let btn = document.getElementById("btn_finalizar");
+  const params = { nickname: [].join("&") };
+  const data = {
+    score_player_1: 3,
+    score_player_2: 0,
+  };
+  btn.addEventListener("click", () => {
+    axios.post(data, {params});
+    .then(res => {
+      console.log("res:", res.data);
+    });
+    .catch(function (error) {
+      console.log(error);
+    });
+  });
   listPlayer = [];
   exibirNaTela();
 }
@@ -85,9 +100,9 @@ function addPlayer() {
   const button = document.createElement("button");
   button.textContent = "Vitória";
   button.onclick = function () {
-	const index = Array.from(tabelaJogadores.rows).indexOf(firstRow) - 1;
-	listPlayer[index].vitoria++;
-	listPlayer[index].pontos = listPlayer[index].pontos += 3;
+    const index = Array.from(tabelaJogadores.rows).indexOf(firstRow) - 1;
+    listPlayer[index].vitoria++;
+    listPlayer[index].pontos = listPlayer[index].pontos += 3;
     // Coloque aqui a lógica que deseja para a ação de vitória
     // Por exemplo, incrementar o número de vitórias ou pontos
     alert(`Vitória de ${jogador1}!`);
@@ -109,9 +124,9 @@ function addPlayer() {
   const button2 = document.createElement("button");
   button2.textContent = "Vitória";
   button2.onclick = function () {
-	const index = Array.from(tabelaJogadores.rows).indexOf(secondRow) - 1;
-		listPlayer[index].vitoria++;
-		listPlayer[index].pontos = listPlayer[index].pontos + 3;
+    const index = Array.from(tabelaJogadores.rows).indexOf(secondRow) - 1;
+    listPlayer[index].vitoria++;
+    listPlayer[index].pontos = listPlayer[index].pontos + 3;
     // Coloque aqui a lógica que deseja para a ação de vitória
     // Por exemplo, incrementar o número de vitórias ou pontos
     alert(`Vitória de ${jogador2}!`);
@@ -123,19 +138,20 @@ function addPlayer() {
   document.getElementById("name2").value = "";
 }
 
-const jogador1 = 'Nome Jogador 1';
-const jogador2 = 'Nome Jogador 2';
+const jogador1 = "Nome Jogador 1";
+const jogador2 = "Nome Jogador 2";
 
 const partida = {
   score_player_1: 3,
   score_player_2: 0,
-}
+};
 
-axios.post('http://localhost:3000/matches', {
-  params: {nickname: [jogador1. jogador2] },
-  data: partida
-})
-.then(function (response) {
-  console.log('Partida iniciada com sucesso:', response.data);
-})
+axios
+  .post("http://localhost:3000/matches", {
+    params: { nickname: [jogador1.jogador2] },
+    data: partida,
+  })
+  .then(function (response) {
+    console.log("Partida iniciada com sucesso:", response.data);
+  });
 // .catch(function ())
